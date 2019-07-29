@@ -1,0 +1,65 @@
+\documentclass{ctexhrbust}
+\usepackage[colorlinks, linkcolor=black, urlcolor=black]{hyperref}
+\usepackage{subfigure}
+\usepackage{enumerate}
+%\usepackage{tikz-er2}
+\usepackage{booktabs}
+
+\usepackage[ruled, vlined, linesnumbered]{algorithm2e}
+
+\bibliographystyle{plain}
+
+\begin{document}
+%封面未完成
+%\include{title}
+
+\pagenumbering{Roman}
+\begin{zh_abstract}{中文论文名}{中文关键字}
+  中文摘要主体。
+\end{zh_abstract}
+\begin{en_abstract}{English title}{English Key words}
+  English abstract body.
+\end{en_abstract}
+
+\addtocontents{toc}{\protect \setcounter{tocdepth}{5} \ignorespaces}
+\addcontentsline{toc}{subparagraph}{}
+\addtocontents{toc}{\protect \setcounter{tocdepth}{2} \ignorespaces}
+
+
+\newpage
+%\pagenumbering{Roman} % 控制目录页码是否重新编号
+\tableofcontents
+
+\newpage
+% 正文目录数字编号
+\pagenumbering{arabic}
+\chapter{第一章}
+\section{第一节}
+正文
+\section{第2节}
+正文
+\chapter{第二章}
+\section{第一节}
+正文
+\section{第2节}
+正文
+
+\chapter*{结论}
+\addcontentsline{toc}{chapter}{结论}
+结论
+\chapter*{致谢}
+\addcontentsline{toc}{chapter}{致谢}
+致谢
+\newpage
+\addcontentsline{toc}{chapter}{参考文献}
+\nocite{*}
+%\bibliography{bibliography}
+
+\renewcommand\HrbustBeforeChapter{附录}
+\renewcommand\HrbustAfterChapter{}
+\appendix
+\chapter{}
+附录
+%\include{appendix}
+
+\end{document}
